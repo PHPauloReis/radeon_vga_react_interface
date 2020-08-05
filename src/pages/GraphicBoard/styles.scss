@@ -1,0 +1,103 @@
+.display_container {
+    font-family: 'Fira Sans', sans-serif;
+    width: 100%;
+    margin-top: 20px;
+    background-color: #202020;
+    border-radius: 5px;
+    display: flex;
+
+    .text_container {        
+        background-color: #303030;
+        width: 432px;
+        height: auto;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-right: 3px solid #202020;
+        padding: 20px;
+        box-sizing: border-box;
+        color: #7F7F80;
+        
+        strong {
+            color: #FFF;
+            font-weight: bold;
+        }
+
+        p {
+            line-height: 20px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .nav_container {
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+
+        ul {
+            display: flex;
+            flex-grow: 1;
+            font-size: 18px;
+	        color: #7F7F80;
+
+            li {
+                flex-grow: 1;
+                flex-basis: calc(25%);
+
+                a {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    height: 150px;
+                    color: #FFF;
+                    text-decoration: none;
+                    border: 2px solid #303030;
+                    border-right: none;
+
+                    .material-icons {
+                        font-size: 50px;
+                        margin-bottom: 10px;
+                    }
+                }
+
+                a:hover {
+                    background-color: #2C2C2C;
+                }
+            }
+
+            li:first-child {
+                a {
+                    border-top-left-radius: 5px;
+                    border-bottom-left-radius: 5px;
+                }                
+            }
+
+            li:last-child {
+                a {
+                    border-top-right-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                    border-right: 2px solid #303030;
+                }                
+            }
+
+            li.activated {
+                a {
+                    background-color: #DD0031;
+                }
+            }
+
+            li.deactivated {
+                a {
+                    color: #585858;
+                }
+            }
+        }
+    }
+}
